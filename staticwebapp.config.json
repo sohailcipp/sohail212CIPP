@@ -51,8 +51,9 @@
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
-      "route": "*",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated"]
+      "route": "/*",
+      "allowedRoles": ["authenticated"],
+      "statusCode": 401
     }
   ],
   "navigationFallback": {
