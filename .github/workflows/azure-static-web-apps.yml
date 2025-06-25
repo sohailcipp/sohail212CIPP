@@ -21,7 +21,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build the Next.js app (uses output: export)
-        run: npm run build
+        run: npm run build   # ✅ This line must be indented correctly under the name block
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
