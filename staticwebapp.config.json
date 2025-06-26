@@ -51,6 +51,10 @@
       "allowedRoles": ["authenticated", "anonymous"]
     },
     {
+      "route": "/api/*",
+      "allowedRoles": ["authenticated", "anonymous"]
+    },
+    {
       "route": "*",
       "allowedRoles": ["authenticated", "anonymous", "admin", "editor", "readonly"]
     }
