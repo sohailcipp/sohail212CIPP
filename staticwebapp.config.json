@@ -36,24 +36,23 @@
     },
     {
       "route": "/authredirect",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["authenticated", "anonymous"]
     },
     {
       "route": "/LogoutRedirect",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["authenticated", "anonymous"]
     },
     {
       "route": "/404",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["authenticated", "anonymous"]
     },
     {
       "route": "/api/Public*",
-      "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
+      "allowedRoles": ["authenticated", "anonymous"]
     },
     {
-      "route": "/*",
-      "allowedRoles": ["authenticated"],
-      "statusCode": 401
+      "route": "*",
+      "allowedRoles": ["authenticated", "anonymous", "admin", "editor", "readonly"]
     }
   ],
   "navigationFallback": {
