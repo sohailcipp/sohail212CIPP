@@ -20,11 +20,15 @@
     },
     {
       "route": "/login",
-      "redirect": "/.auth/login/aad?post_login_redirect_uri=/"
+      "rewrite": "/.auth/login/aad"
     },
     {
       "route": "/logout",
       "redirect": "/.auth/logout?post_logout_redirect_uri=/LogoutRedirect"
+    },
+    {
+      "route": "/.auth/me",
+      "allowedRoles": ["authenticated", "contributor", "admin"]
     },
     {
       "route": "/authredirect",
@@ -73,6 +77,9 @@
     }
   },
   "globalHeaders": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "*",
     "content-security-policy": "default-src https: blob: 'unsafe-eval' 'unsafe-inline'; object-src 'self' blob:; img-src 'self' blob: data: *"
   },
   "mimeTypes": {
