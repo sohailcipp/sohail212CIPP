@@ -20,7 +20,7 @@
     },
     {
       "route": "/login",
-      "rewrite": "/.auth/login/aad"
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=/"
     },
     {
       "route": "/logout",
